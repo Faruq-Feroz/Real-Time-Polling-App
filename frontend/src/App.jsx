@@ -9,7 +9,7 @@ import PollsList from './components/PollList/PollList';
 import PollDetail from './components/PollDetails/PollDetails';
 
 // Create socket instance
-const socket = io('http://localhost:4000');
+const socket = io('https://real-time-polling-app-gi46.onrender.com');
 
 function App() {
   const [polls, setPolls] = useState([]);
@@ -53,7 +53,7 @@ function App() {
   const fetchPolls = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:4000/api/polls');
+      const response = await axios.get('https://real-time-polling-app-gi46.onrender.com/api/polls');
       setPolls(response.data);
       setLoading(false);
     } catch (error) {
@@ -65,7 +65,7 @@ function App() {
 
   const handleCreatePoll = async (pollData) => {
     try {
-      const response = await axios.post('http://localhost:4000/api/polls', pollData);
+      const response = await axios.post('https://real-time-polling-app-gi46.onrender.com/api/polls', pollData);
       setPolls([...polls, response.data]);
       toast.success('Poll created successfully!');
     } catch (error) {
@@ -76,7 +76,7 @@ function App() {
 
   const handleVote = async (pollId, option) => {
     try {
-      await axios.post('http://localhost:4000/api/polls/vote', { pollId, option });
+      await axios.post('https://real-time-polling-app-gi46.onrender.com/api/polls/vote', { pollId, option });
       toast.success('Vote recorded!');
     } catch (error) {
       console.error('Error voting:', error);
@@ -86,7 +86,7 @@ function App() {
 
   const handleClosePoll = async (pollId) => {
     try {
-      await axios.post(`http://localhost:4000/api/polls/close/${pollId}`);
+      await axios.post(`https://real-time-polling-app-gi46.onrender.com/api/polls/close/${pollId}`);
       toast.info('Poll closed successfully');
     } catch (error) {
       console.error('Error closing poll:', error);
