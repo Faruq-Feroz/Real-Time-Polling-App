@@ -1,0 +1,115 @@
+.formContainer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    color: #4a69bd;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #4a69bd;
+    box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
+  }
+  
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .optionsContainer label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .optionRow {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .removeButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .addButton {
+    background-color: #f5f5f5;
+    color: #4a69bd;
+    border: 1px dashed #4a69bd;
+    border-radius: 4px;
+    padding: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .submitButton {
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #3c5aa9;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+  }

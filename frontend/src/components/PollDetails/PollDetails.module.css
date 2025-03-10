@@ -1,0 +1,247 @@
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .backButton, .closeButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .backButton {
+    color: #4a69bd;
+  }
+  
+  .backButton:hover {
+    background-color: rgba(74, 105, 189, 0.1);
+  }
+  
+  .closeButton {
+    color: #e74c3c;
+  }
+  
+  .closeButton:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .pollContent {
+    padding: 1.5rem;
+  }
+  
+  .question {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 0 0 1rem;
+  }
+  
+  .statusBadge {
+    margin-bottom: 1.5rem;
+  }
+  
+  .activeStatus, .closedStatus {
+    display: inline-flex;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .activeStatus {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #27ae60;
+  }
+  
+  .closedStatus {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #c0392b;
+  }
+  
+  .votingSection, .resultsSection {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .sectionTitle {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .sectionIcon {
+    margin-right: 0.5rem;
+    color: #4a69bd;
+  }
+  
+  .totalVotes {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: normal;
+  }
+  
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .optionItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e1e1e1;
+  }
+  
+  .optionItem:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .optionItem.selected {
+    background-color: rgba(74, 105, 189, 0.1);
+    border-color: #4a69bd;
+  }
+  
+  .radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #4a69bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .radioFill {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #4a69bd;
+  }
+  
+  .voteButton {
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+  
+  .voteButton:hover {
+    background-color: #3c5aa9;
+  }
+  
+  .voteButton:disabled {
+    background-color: #a4b0be;
+    cursor: not-allowed;
+  }
+  
+  .votedMessage {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    border-left: 4px solid #27ae60;
+    color: #27ae60;
+  }
+  
+  .chartContainer {
+    margin: 1.5rem 0;
+    height: 300px;
+  }
+  
+  .resultsList {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .resultItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .resultInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .resultLabel {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .resultCount {
+    color: #7f8c8d;
+  }
+  
+  .progressContainer {
+    height: 8px;
+    background-color: #e1e1e1;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background: linear-gradient(to right, #4a69bd, #3c5aa9);
+    border-radius: 4px;
+    transition: width 0.5s;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .pollContent {
+      padding: 1rem;
+    }
+    
+    .chartContainer {
+      height: 250px;
+    }
+  }
