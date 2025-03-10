@@ -1,10 +1,9 @@
 # 🗳️ **Real-Time Polling App**
 
 ## 🚀 Live Demo
-[![Live Demo](/screenshots/Home.png)](https://your-deployment-url.com)
+[![Live Demo](/screenshots/Home.png)](https://real-time-polling-app-xi.vercel.app/)
 
-### 🏠 Home Screenshot  
-![Real-Time Polling App](/screenshots/Home.png)
+
 
 ---
 
